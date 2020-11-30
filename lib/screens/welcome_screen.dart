@@ -1,9 +1,11 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flash_chat/components/rounded_button.dart';
 import 'package:flutter/material.dart';
 
 import 'login_screen.dart';
 import 'registration_screen.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class WelcomeScreen extends StatefulWidget {
 
@@ -14,7 +16,21 @@ class WelcomeScreen extends StatefulWidget {
   _WelcomeScreenState createState() => _WelcomeScreenState();
 }
 
+
+
 class _WelcomeScreenState extends State<WelcomeScreen> {
+
+  @override
+  void initState() {
+
+    super.initState();
+    Firebase.initializeApp();
+    setState(() {
+
+    });
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
